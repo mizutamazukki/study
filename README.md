@@ -2,22 +2,21 @@
 railsのセットアップ 
 
 ## 環境
-ruby 2.7.2
-rails 7.0.4
-mysql 5.7
+- ruby 2.7.2
+
+- rails 7.0.4
+
+- mysql 5.7
 
 ## Setup
 
 ```
+脆弱性が見つかるとbuildしてくれないのでfalseにしておく
+# エラー内容 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 export DOCKER_SCAN_SUGGEST=false
-```
 
-```
 docker-compose build
-```
-完了後
 
-```
 docker-compose up
 ```
 
