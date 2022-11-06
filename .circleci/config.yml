@@ -36,9 +36,9 @@ commands:
     steps:
       - checkout
       - ruby/install-deps
-      - node/install-packages:
-          pkg-manager: yarn
-          cache-key: "yarn.lock"
+      # - node/install-packages:
+      #     pkg-manager: yarn
+      #     cache-key: "yarn.lock"
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
       - setup
   test:
     docker:
-      - image: circleci/ruby:2.7-node
+      - image: circleci/ruby:2.7.2-node
       - image: circleci/mysql:5.7-alpine
         name: "db"
         environment:
