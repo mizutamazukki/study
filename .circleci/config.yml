@@ -43,7 +43,7 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7-node
+      - image: circleci/ruby:2.7.2-node
     steps:
       - setup
   test:
