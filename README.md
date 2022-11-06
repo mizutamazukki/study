@@ -3,9 +3,7 @@ railsのセットアップ
 
 ## 環境
 - ruby 2.7.2
-
 - rails 7.0.4
-
 - mysql 5.7
 
 ## Setup
