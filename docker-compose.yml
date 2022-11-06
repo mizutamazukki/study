@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    ports:
+      - 3306:3306
+    # 環境変数の指定（初期設定値）
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: passw0rd
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ./data:/var/lib/mysql
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
