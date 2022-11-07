@@ -34,10 +34,10 @@ services:
     ports:
       - 4040:80
     environment:
-      MYSQL_ROOT_PASSWORD: rootpw
+      # MYSQL_ROOT_PASSWORD: rootpw
       MYSQL_DATABASE: test_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: passw0rd
+      MYSQL_USER: root
+      MYSQL_PASSWORD: rootpw
       TZ: "Asia/Tokyo"
     depends_on:
       - db
