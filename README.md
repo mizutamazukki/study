@@ -29,15 +29,15 @@ docker-compose up
 `localhost:4040`アクセス
 
 ## QAメモ
-- コマンドを使ってデータベースを作成したい
+### コマンドを使ってデータベースを作成したい
 
 `docker ps`を行い`study-db-1`が立ち上がっていることを確認する
 
 立ち上がっていない場合は、`docker-compose up db`などをすると立ち上がる
 `docker-compose run web rails db:create`をうつ
 
-- コマンドを使ってテーブルを作成したい
-
+### コマンドを使ってテーブルを作成したい
 `docker ps`を行い`study-db-1`が立ち上がっていることを確認する
+
 立ち上がっていない場合は、`docker-compose up db`などをすると立ち上がる
 `docker-compose run web rails db:migrate`をうつ
