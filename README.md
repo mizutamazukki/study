@@ -22,7 +22,9 @@ docker-compose up
 `http://localhost:3000`を確認
 
 ## phpmyadmin
-ログインは、`docker-compose.yml`に記載されている`MYSQL_USER`と`MYSQL_PASSWORD`参照
+###　ログイン方法
+- user: root
+- `MYSQL_ROOT_PASSWORD`参照
 
 `localhost:4040`アクセス
 
