@@ -14,6 +14,12 @@ services:
       TZ: "Asia/Tokyo"
     volumes:
       - ./data:/var/lib/mysql
+  # nginx:
+  #   image: nginx:1.19
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx:/usr/share/nginx/html
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
@@ -21,5 +27,17 @@ services:
       - .:/myapp
     ports:
       - "3000:3000"
+    depends_on:
+      - db
+  phpadmin:
+    image: amd64/phpmyadmin
+    ports:
+      - 4040:80
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: passw0rd
+      TZ: "Asia/Tokyo"
     depends_on:
       - db
