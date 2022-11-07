@@ -5,7 +5,7 @@ railsのセットアップ
 - ruby 2.7.2
 - rails 7.0.4
 - mysql 5.7
-
+- phpmyadmin
 ## Setup
 
 ```
@@ -19,6 +19,10 @@ docker-compose up
 ```
 
 `http://localhost:3000`を確認
+
+## phpmyadmin
+ログインは、`docker-compose.yml`に記載されている`MYSQL_USER`と`MYSQL_PASSWORD`参照
+`localhost:4040`アクセス
 
 ## QAメモ
 - コマンドを使ってデータベースを作成したい
