@@ -9,6 +9,7 @@ railsのセットアップ
 ## Setup
 
 ```
+<!-- 開発環境のみで -->
 # 脆弱性が見つかるとbuildしてくれないのでfalseにしておく
 # エラー内容 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 export DOCKER_SCAN_SUGGEST=false
