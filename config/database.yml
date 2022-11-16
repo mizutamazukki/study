@@ -1,22 +1,22 @@
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: rootpw
-  host: db
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: root
+#   password: rootpw
+#   host: db
 
-development:
-  <<: *default
-  database: sample_mysql_dev
+# development:
+#   <<: *default
+#   database: sample_mysql_dev
 
-test:
-  <<: *default
-  database: sample_mysql_test
+# test:
+#   <<: *default
+#   database: sample_mysql_test
 
-production:
-  <<: *default
-  adapter: mysql2
-  encoding: utf8
-  database: sample_mysql_production
-  pool: 5
+# production:
+#   <<: *default
+#   adapter: mysql2
+#   encoding: utf8
+#   database: sample_mysql_production
+#   pool: 5
