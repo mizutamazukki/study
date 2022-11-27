@@ -9,6 +9,10 @@ railsのセットアップ
 ## Setup
 
 ```
+# ローカル環境に複製するコマンド
+git clone https://github.com/mizutamazukki/study-docker-rails.git
+cd study-docker-rails
+
 <!-- 開発環境のみで -->
 # 脆弱性が見つかるとbuildしてくれないのでfalseにしておく
 # エラー内容 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
